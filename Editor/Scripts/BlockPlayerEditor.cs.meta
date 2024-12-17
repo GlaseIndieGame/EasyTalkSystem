@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 742b9625fed8a604c8d5c3400057fc8d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _defaultTalkSetting: {fileID: 11400000, guid: d9dbe3845542f83438f5dea2ae279634,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

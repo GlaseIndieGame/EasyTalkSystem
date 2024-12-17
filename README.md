@@ -1,0 +1,5 @@
+# REAME
+
+Unityにおける会話作成システムです。
+
+詳しくはTools>EasyTalkSystem>CreateTalkSystemによって作成されるBlockPlayerゲームオブジェクトをご覧ください。

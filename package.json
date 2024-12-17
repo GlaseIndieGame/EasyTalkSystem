@@ -1,0 +1,12 @@
+{
+  "name": "com.glase.easytalksystem",
+  "version": "1.0.0",
+  "description": "A simple conversation creation system.",
+  "displayName": "EasyTalkSystem",
+  "unity": "2022.3",
+  "author": {
+    "name": "glase",
+    "email": "dessermuhine@gmail.com",
+    "url": "https://github.com/GlaseIndieGame"
+  }
+}
