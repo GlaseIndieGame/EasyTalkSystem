@@ -13,10 +13,11 @@ namespace EasyTalkSystem.Editor
             // 選択肢設定リストの表示を簡潔に
             var container = new VisualElement();
             {
+                container.viewDataKey = "choose-container";
                 var foldout = new Foldout();
                 {
+                    foldout.viewDataKey = "choose-foldout";
                     foldout.text = "選択肢";
-                    foldout.value = false;
 
                     var inspector = new VisualElement();
                     {

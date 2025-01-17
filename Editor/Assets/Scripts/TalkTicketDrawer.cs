@@ -13,8 +13,8 @@ namespace EasyTalkSystem.Editor
         {
             Foldout container = new();
             {
+                container.viewDataKey = "talk-container";
                 container.text = "‰ï˜b";
-                container.value = false;
 
                 TextField textField = new("");
                 {

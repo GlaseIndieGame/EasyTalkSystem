@@ -13,10 +13,11 @@ namespace EasyTalkSystem.Editor
             // エディターの高さを少なくするため表示を詰める
             var container = new VisualElement();
             {
+                container.viewDataKey = "waitevent-container";
                 var foldOut = new Foldout();
                 {
+                    foldOut.viewDataKey = "waitevent-foldOut";
                     foldOut.text = "関数待機";
-                    foldOut.value = false;
 
                     var action = new PropertyField(property.FindPropertyRelative("_waitAction"), "WaitAction");
                     {

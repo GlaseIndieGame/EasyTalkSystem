@@ -41,11 +41,23 @@ namespace EasyTalkSystem.Editor
 
             var container = new VisualElement();
             {
+                container.viewDataKey = "player-container";
                 var listContainer = new VisualElement();
                 {
+                    listContainer.viewDataKey = "player-listcontainer";
                     var list = new ListView();
                     {
+                        list.viewDataKey = "player-list";
                         list.BindProperty(serializedObject.FindProperty("_blocks"));
+
+                        list.bindItem += (VisualElement elem, int index) =>
+                        {
+                            if (elem is PropertyField propertyField)
+                            {
+                                propertyField.BindProperty(serializedObject.FindProperty("_blocks").GetArrayElementAtIndex(index));
+                                propertyField.viewDataKey = "block-list" + index;
+                            }
+                        };
 
                         // 選択したアイテムを編集できるようにするため
                         list.selectedIndicesChanged += (collection) =>

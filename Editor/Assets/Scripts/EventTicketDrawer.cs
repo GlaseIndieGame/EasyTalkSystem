@@ -13,10 +13,11 @@ namespace EasyTalkSystem.Editor
             // ï\é¶ÇÃçÇÇ≥ÇêﬂñÒ
             var container = new VisualElement();
             {
+                container.viewDataKey = "event-container";
                 var foldOut = new Foldout();
                 {
+                    foldOut.viewDataKey = "event-foldout";
                     foldOut.text = "ä÷êî";
-                    foldOut.value = false;
 
                     var action = new PropertyField(property.FindPropertyRelative("_action"), "Action");
                     {

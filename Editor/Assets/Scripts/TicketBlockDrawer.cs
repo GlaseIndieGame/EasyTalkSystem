@@ -16,8 +16,18 @@ namespace EasyTalkSystem.Editor
             // チケットの予期せぬ追加を防止するため
             var container = new VisualElement();
             {
+                container.viewDataKey = "block-container";
                 var talkBlockField = new ListView();
                 {
+                    talkBlockField.bindItem += (VisualElement elem, int index) =>
+                    {
+                        if (elem is PropertyField propertyField)
+                        {
+                            propertyField.BindProperty(property.FindPropertyRelative("_talkBlock").GetArrayElementAtIndex(index));
+                            propertyField.viewDataKey = "ticket-field" + index;
+                        }
+                    };
+                    talkBlockField.viewDataKey = "block-talkBlockField";
                     talkBlockField.showAddRemoveFooter = true;
                     talkBlockField.showFoldoutHeader = true;
                     talkBlockField.showBorder = true;
